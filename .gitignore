@@ -1,0 +1,17 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+
+.env
+.env.*
+!.env.example
+
+*.sqlite3
+*.sqlite3-*
+
+staticfiles/
+.pytest_cache/
+.ruff_cache/
+.sites-runtime/
+.openai/

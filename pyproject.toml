@@ -1,0 +1,25 @@
+[project]
+name = "opensupport"
+version = "0.1.0"
+description = "Bilingual open source sponsorship directory with ownership verification and moderation"
+requires-python = ">=3.14"
+dependencies = [
+    "Django>=6.0,<7",
+    "gunicorn>=23,<24",
+    "psycopg[binary]>=3.2,<4",
+    "pyyaml>=6.0.2,<7",
+    "whitenoise>=6.9,<7",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.12", "pip-audit>=2.9"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]

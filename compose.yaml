@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: opensupport
+      POSTGRES_USER: opensupport
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opensupport -d opensupport"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+  web:
+    build: .
+    env_file: .env
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+    read_only: true
+    tmpfs: [/tmp]
+    restart: unless-stopped
+volumes:
+  postgres_data:

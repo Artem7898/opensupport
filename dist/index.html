@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Discover open source projects and support the people who maintain them. Transparent funding, direct support.">
+<meta name="theme-color" content="#111313">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+<title>OpenSupport — Keep open source moving</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c6f86a'/%3E%3Cpath d='M12 9L5 16l7 7m8-14 7 7-7 7M18 7l-4 18' fill='none' stroke='%23111313' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+<aside class="sidebar">
+<a class="brand" href="#explore" aria-label="OpenSupport home"><span class="brand-icon">&lt;/&gt;</span><span>open<span class="brand-light">support</span><span class="brand-period">.</span></span></a>
+<div class="workspace-label">THE OPEN SOURCE COMMONS</div>
+<nav class="side-nav" aria-label="Main navigation">
+<a href="#explore" class="nav-item active" data-page="explore"><span aria-hidden="true">▦</span><span data-t="explore">Explore projects</span><span class="nav-count" id="nav-count">6</span></a>
+<a href="#how" class="nav-item" data-page="how"><span aria-hidden="true">◎</span><span data-t="how">How it works</span></a>
+<a href="#principles" class="nav-item" data-page="principles"><span aria-hidden="true">◇</span><span data-t="principles">Our principles</span></a>
+<button type="button" class="nav-item support-nav" id="open-support"><span aria-hidden="true">♡</span><span data-t="supportNav">Support OpenSupport</span></button>
+</nav>
+<div class="sidebar-note"><span class="tiny-label" data-t="builtTogether">BUILT TOGETHER</span><h3 data-t="sideTitle">Good software takes people.</h3><p data-t="sideText">Help the maintainers behind your everyday dependencies.</p><a href="#principles" data-t="readManifesto">Read our manifesto</a></div>
+<div class="sidebar-bottom"><span class="opensource-mark">&lt;/&gt;</span><span data-t="independent">Independent. Open by design.</span><span class="version">v0.1</span></div>
+</aside>
+<div class="app-shell">
+<header class="topbar"><div class="breadcrumb"><span>OpenSupport</span><span class="slash">/</span><strong id="breadcrumb" data-t="directory">Directory</strong></div><div class="top-actions"><div class="language-switch" aria-label="Interface language"><button data-lang="en" class="selected">EN</button><button data-lang="ru">RU</button></div><button class="add-btn" id="add-project"><span aria-hidden="true">＋</span><span data-t="submitProject">Submit a project</span></button></div></header>
+<main id="main" tabindex="-1">
+<section id="explore-page" class="page">
+<div class="eyebrow"><span class="line"></span><span data-t="eyebrow">SMALL CONTRIBUTIONS. LASTING IMPACT.</span></div>
+<section class="intro"><div><h1 data-t="headline">Open source.<br><span>Supported by you.</span></h1><p data-t="intro">Discover the projects you depend on.<br>Support the people who keep them moving.</p></div><div class="support-note"><span class="note-icon" aria-hidden="true">✳</span><div><strong data-t="directTitle">Your support. Their future.</strong><p data-t="directText">Contribute directly through GitHub Sponsors or Open Collective.</p><span class="note-foot" data-t="noMiddle">No payments handled here.</span></div></div></section>
+<div class="directory-heading"><div><h2 data-t="discover">Discover projects</h2><span class="result-total" id="result-total">6</span></div><p data-t="curated">Curated from public funding links</p></div>
+<div class="tools"><div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search" type="search" maxlength="100" autocomplete="off" placeholder="Search projects, maintainers, topics…" aria-label="Search projects"><kbd>/</kbd></div><select id="provider" aria-label="Funding platform"><option value="all">All funding platforms</option><option value="github">GitHub Sponsors</option><option value="collective">Open Collective</option></select><select id="sort" aria-label="Sort projects"><option value="curated">Curated order</option><option value="name">Name A–Z</option></select></div>
+<div class="filter-row"><div id="categories" class="categories" aria-label="Project category"></div><span class="view-label" data-t="allOpen">Open code. Direct support.</span></div>
+<div id="project-grid" class="project-grid" aria-live="polite"></div>
+<div class="catalog-foot"><span data-t="snapshot">Funding links checked October 4, 2026 · No live financial data</span><a href="#how" data-t="listingQuestion">How are projects listed?</a></div>
+<section class="maintainer-callout"><span class="callout-symbol" aria-hidden="true">{&nbsp;}</span><div><h2 data-t="maintainerTitle">You maintain the code. Let the community help.</h2><p data-t="maintainerText">A place for your project, with ownership checks and a human review.</p></div><button id="add-project-bottom" class="secondary-btn" data-t="submitProject">Submit a project</button></section>
+</section>
+<section id="how-page" class="page article-page" hidden></section>
+<section id="principles-page" class="page article-page" hidden></section>
+<section id="support-project-section" class="platform-support" aria-labelledby="platform-support-title">
+<div class="platform-support-heading"><div><span class="tiny-label" data-t="supportEyebrow">SUPPORT THE PLATFORM</span><h2 id="platform-support-title" tabindex="-1" data-t="supportTitle">Help OpenSupport grow.</h2><p data-t="supportDescription">Support Artem Alimpiev’s work on OpenSupport with a voluntary contribution.</p></div><span class="support-heart" aria-hidden="true">♡</span></div>
+<div class="support-options"><div class="wallet-panel"><div class="wallet-heading"><strong>USDT</strong><span class="network-badge">TRON · TRC20</span></div><label for="support-wallet" data-t="walletLabel">Author’s wallet address</label><div class="wallet-controls"><textarea id="support-wallet" rows="2" readonly spellcheck="false" autocomplete="off" aria-describedby="wallet-network-note">TSa7CFcQRJ5tw5cGHSwMoZ9brdmUC893Lx</textarea><button type="button" class="primary-link" id="copy-wallet" data-t="copyWallet">Copy address</button></div><p id="wallet-network-note" class="network-note" data-t="walletNetworkNote">Send only USDT on the TRON (TRC20) network.</p><p id="wallet-copy-status" class="wallet-copy-status" role="status" aria-live="polite"></p></div>
+<div class="github-support"><span class="github-star" aria-hidden="true">☆</span><h3 data-t="starTitle">A star makes a difference.</h3><p data-t="starDescription">If OpenSupport is useful to you, remember to give the project a star on GitHub.</p><a id="author-github" class="secondary-btn" href="https://github.com/Artem7898?tab=repositories" target="_blank" rel="noopener noreferrer" data-t="authorGithub">Author’s projects on GitHub</a></div></div>
+<p class="support-disclosure" data-t="supportDisclosure">This wallet supports the author of OpenSupport. Each listed project has its own funding links. Transfers are made in your wallet; OpenSupport does not connect to it or confirm payments.</p>
+</section>
+<footer><a class="footer-wordmark" href="#explore">opensupport.</a><span data-t="footer">Sustainable software starts with supported people.</span><span>2026</span></footer>
+</main>
+</div>
+<dialog id="detail-dialog"><div class="dialog-top"><span class="tiny-label" data-t="projectDetail">PROJECT PROFILE</span><button class="icon-btn" data-close="detail-dialog" aria-label="Close">×</button></div><div id="detail-content"></div></dialog>
+<dialog id="submit-dialog"><div class="dialog-top"><span class="tiny-label" data-t="forMaintainers">FOR MAINTAINERS</span><button class="icon-btn" data-close="submit-dialog" aria-label="Close">×</button></div><div id="submit-content"></div></dialog>
+<div id="toast" role="status" hidden></div>
+</body></html>

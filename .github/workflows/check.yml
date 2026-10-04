@@ -1,0 +1,23 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run ruff check backend
+      - run: uv run ruff format --check backend
+      - run: uv run backend/manage.py collectstatic --noinput
+        env:
+          DJANGO_DEBUG: '1'
+      - run: uv run backend/manage.py test directory
+        env:
+          DJANGO_DEBUG: '1'
+      - run: node --check dist/app.js
+      - run: uv run pip-audit --local --progress-spinner off
